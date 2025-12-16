@@ -7,3 +7,4 @@ function Home(){
     <Navbar/>
     </>);
 }
+export default Home
