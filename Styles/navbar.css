@@ -1,0 +1,8 @@
+.vitgpt-header{
+    background-color: black;
+}
+.vitgpt-navbar{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20rem;
+}

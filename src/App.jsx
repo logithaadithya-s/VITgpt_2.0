@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from "../pages/Home"
 import { NavLink } from 'react-router-dom'
+import Navbar from '../pages/components/navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Home/>
+      <Navbar subjects={[{id:1,SubjectName:"hello"}]}/>
     </>
   )
 }
