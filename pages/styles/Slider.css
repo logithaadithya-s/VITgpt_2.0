@@ -1,0 +1,85 @@
+.mainimg {
+    width: 90%;
+    display: grid;
+    margin-top: -50px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1100px;
+    text-align: left;
+    color: white;
+    padding-top:17vh;
+    padding-bottom:7vh;
+}
+
+.maininnerimg {
+    padding: 22vh 10vw;
+    position: relative;
+    animation: texts 3s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+}
+@keyframes texts {
+    0%{left:-600px;}
+    100%{left:0px;}
+}
+h1.maintext {
+    font-size: 2.5rem;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #b3b3b3;
+}
+.mainnavbutton {
+    margin-top: 20px;
+}
+
+.quote-btn {
+    background: transparent;
+    border: 1.5px solid white;
+    color: white;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.quote-btn:hover {
+    background: white;
+    color: black;
+}
+.quotesimg {
+    width: 357.14px;
+    height: 571.42px;
+    padding-left:4vw;
+    margin-top: 30px;
+    
+    position: relative;
+    animation: mobile 3s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    z-index:-100;
+}
+@keyframes mobile{
+    0%{top:600px;}
+    100%{top:0px}
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+.commonbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    color: white;
+}

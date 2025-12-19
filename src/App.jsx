@@ -11,7 +11,8 @@ function App() {
 
   return (
     <>
-      <Navbar subjects={[{id:1,SubjectName:"hello"}]}/>
+      <Navbar/>
+      <Home/>
     </>
   )
 }
