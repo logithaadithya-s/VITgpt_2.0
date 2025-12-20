@@ -3,8 +3,7 @@ import Navbar from "./components/navbar";
 
 function Subject(){
     return (
-    <>
-        <Navbar/>    
+    <>    
     </>);
 }
 export default Subject
