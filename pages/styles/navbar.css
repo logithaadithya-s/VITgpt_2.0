@@ -31,6 +31,9 @@
     border-radius: 2rem;
     margin-top: -3.5px;
 }
+.subject-input:hover{
+    border: none;
+}
 .upload-button {
     background: transparent;
     border: 1.5px solid white;

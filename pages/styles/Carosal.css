@@ -1,0 +1,274 @@
+.carousel-container {
+    background-color: #0a0a0a;
+    padding: 2rem 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-header {
+    text-align: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .carousel-header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: 0;
+    padding: 5px;
+  }
+  
+  .carousel-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  .carousel-arrow {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .subject-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    height: 320px;
+  }
+  
+  .subject-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .subject-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .subject-card:hover .subject-image {
+    transform: scale(1.05);
+  }
+  
+  .subject-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .subject-card:hover .subject-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .subject-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .subject-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+  
+  .carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+  }
+  
+  .carousel-dot.active {
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    transform: scale(1.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .carousel-slide {
+      flex: 0 0 calc(50% - 10px);
+    }
+    
+    .carousel-header {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-wrapper {
+      padding: 0 50px;
+    }
+    
+    .carousel-slide {
+      flex: 0 0 100%;
+    }
+    
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .carousel-arrow {
+      font-size: 1.5rem;
+    }
+    
+    .carousel-header {
+      font-size: 1.75rem;
+    }
+    
+    .subject-card {
+      height: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-container {
+      padding: 1.5rem 0.5rem;
+    }
+    
+    .carousel-wrapper {
+      padding: 0 40px;
+    }
+    
+    .carousel-header {
+      font-size: 1.5rem;
+    }
+    
+    .carousel-btn {
+      width: 35px;
+      height: 35px;
+    }
+    
+    .carousel-arrow {
+      font-size: 1.25rem;
+    }
+    
+    .subject-card {
+      height: 250px;
+    }
+    
+    .subject-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Optional: Add gradient border on hover */
+  .subject-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .subject-card:hover::before {
+    opacity: 1;
+    animation: rotate 3s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
